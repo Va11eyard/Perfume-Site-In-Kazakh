@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сәнді парфюмерия әлемі - сапалы және ерекше иіс сулары">
+    <title>Парфюмерия - Сәнді иіс сулары</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Парфюмерия</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Басты бет</a></li>
+                <li><a href="#about">Біз туралы</a></li>
+                <li><a href="#products">Өнімдер</a></li>
+                <li><a href="#contact">Байланыс</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Сәнді парфюмерия әлемі</h1>
+                <p>Сапалы және ерекше иіс сулары</p>
+                <button class="cta-button">Өнімдерді көру</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Біз туралы</h2>
+                <p>Парфюмерия - бұл өнер мен сәннің үйлесімі. Біз сізге ең сапалы және ерекше иіс суларын ұсынамыз. Әрбір парфюм өзінің бірегей хош иісімен ерекшеленеді және сіздің жеке стиліңізді толықтырады.</p>
+                <p>Біздің коллекциямызда классикалық және заманауи иіс сулары бар. Әр адамның өз талғамы мен қалауына сай парфюм табуға болады. Сапа мен сәнділіктің үйлесімі - біздің басты мақсатымыз.</p>
+                <p>Парфюмерия әлемінде сізбен бірге саяхаттауға шақырамыз!</p>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Біздің өнімдер</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Гүл иісі" loading="lazy">
+                        <h3>Гүл иісі</h3>
+                        <p>Жазғы гүлдердің нәзік хош иісі. Романтикалық және жұмсақ парфюм.</p>
+                        <span class="price">15,000 ₸</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Мұхит самалы" loading="lazy">
+                        <h3>Мұхит самалы</h3>
+                        <p>Теңіз самалының сергек және таза иісі. Күнделікті қолдануға өте ыңғайлы.</p>
+                        <span class="price">18,000 ₸</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Түнгі жұлдыз" loading="lazy">
+                        <h3>Түнгі жұлдыз</h3>
+                        <p>Кешкі шараларға арналған ерекше парфюм. Күшті және тартымды иіс.</p>
+                        <span class="price">22,000 ₸</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=400&fit=crop" alt="Алтын күз" loading="lazy">
+                        <h3>Алтын күз</h3>
+                        <p>Күзгі орманның жылы және жұмсақ иісі. Классикалық және элегантты.</p>
+                        <span class="price">17,500 ₸</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=400&h=400&fit=crop" alt="Жасмин бағы" loading="lazy">
+                        <h3>Жасмин бағы</h3>
+                        <p>Жасмин гүлінің хош иісі. Әйелдерге арналған нәзік парфюм.</p>
+                        <span class="price">19,500 ₸</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Қара мысық" loading="lazy">
+                        <h3>Қара мысық</h3>
+                        <p>Күшті және сексуалды иіс. Ерлерге және батыл әйелдерге арналған.</p>
+                        <span class="price">24,000 ₸</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Байланыс</h2>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" id="name" placeholder="Атыңыз" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" placeholder="Хабарлама" required></textarea>
+                    <button type="submit">Жіберу</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Парфюмерия. Барлық құқықтар қорғалған.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
