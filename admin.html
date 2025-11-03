@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
     <div class="admin-container">
         <header class="admin-header">
@@ -19,7 +21,7 @@
                 <h2>Жаңа өнім қосу</h2>
                 <form id="productForm" class="product-form">
                     <input type="hidden" id="productId">
-                    
+
                     <div class="form-group">
                         <label for="productName">Өнім атауы *</label>
                         <input type="text" id="productName" required placeholder="Мысалы: Гүл иісі">
@@ -57,7 +59,7 @@
                     <h2>Барлық өнімдер (<span id="productCount">0</span>)</h2>
                     <button id="resetBtn" class="btn-danger">Бастапқы өнімдерді қалпына келтіру</button>
                 </div>
-                
+
                 <div id="adminProductsList" class="admin-products-list">
                     <!-- Products will be loaded here -->
                 </div>
@@ -67,4 +69,5 @@
 
     <script src="js/admin.js"></script>
 </body>
+
 </html>
