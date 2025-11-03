@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель - Парфюмерия</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>🔐 Админ панель</h1>
+            <a href="index.html" class="btn-back">← Басты бетке оралу</a>
+        </header>
+
+        <main class="admin-main">
+            <section class="admin-form-section">
+                <h2>Жаңа өнім қосу</h2>
+                <form id="productForm" class="product-form">
+                    <input type="hidden" id="productId">
+                    
+                    <div class="form-group">
+                        <label for="productName">Өнім атауы *</label>
+                        <input type="text" id="productName" required placeholder="Мысалы: Гүл иісі">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">Сипаттама *</label>
+                        <textarea id="productDescription" required placeholder="Өнім туралы қысқаша ақпарат"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productPrice">Бағасы (₸) *</label>
+                        <input type="number" id="productPrice" required placeholder="15000" min="0" step="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Сурет URL *</label>
+                        <input type="url" id="productImage" required placeholder="https://images.unsplash.com/...">
+                        <small>Unsplash немесе басқа сурет URL мекенжайын енгізіңіз</small>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <span id="submitText">Қосу</span>
+                        </button>
+                        <button type="button" id="cancelBtn" class="btn-secondary" style="display: none;">
+                            Болдырмау
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="admin-products-section">
+                <div class="section-header">
+                    <h2>Барлық өнімдер (<span id="productCount">0</span>)</h2>
+                    <button id="resetBtn" class="btn-danger">Бастапқы өнімдерді қалпына келтіру</button>
+                </div>
+                
+                <div id="adminProductsList" class="admin-products-list">
+                    <!-- Products will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

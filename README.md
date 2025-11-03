@@ -11,6 +11,8 @@ A modern, responsive perfume website built with HTML, CSS, and JavaScript, featu
 - 📧 Contact form with validation
 - ♿ Semantic HTML5 structure
 - 🚀 Optimized for GitHub Pages
+- 🔐 **Admin Panel** - Add, edit, and delete products with photos
+- 💾 LocalStorage - Products persist in browser
 
 ## Live Demo
 
@@ -27,10 +29,13 @@ Visit the live site: [Your GitHub Pages URL]
 
 ```
 ├── index.html          # Main HTML file
+├── admin.html          # Admin panel for managing products
 ├── css/
-│   └── styles.css      # All styles
+│   ├── styles.css      # Main styles
+│   └── admin.css       # Admin panel styles
 ├── js/
-│   └── main.js         # JavaScript functionality
+│   ├── main.js         # Main JavaScript functionality
+│   └── admin.js        # Admin panel functionality
 └── README.md           # This file
 ```
 
@@ -67,9 +72,39 @@ Visit the live site: [Your GitHub Pages URL]
 4. Select main branch as source
 5. Save and wait for deployment
 
+## Admin Panel
+
+Access the admin panel at `admin.html` to manage products:
+
+### Features:
+- ➕ **Add Products** - Create new perfume listings with name, description, price, and image URL
+- ✏️ **Edit Products** - Update existing product information
+- 🗑️ **Delete Products** - Remove products from the catalog
+- 🔄 **Reset** - Restore default products
+- 💾 **Auto-save** - All changes are saved to browser localStorage
+
+### How to Use:
+1. Open `admin.html` in your browser
+2. Fill in the product form:
+   - Product name (in Kazakh)
+   - Description
+   - Price in Tenge (₸)
+   - Image URL (use Unsplash or any image hosting)
+3. Click "Қосу" (Add) to create a new product
+4. Use Edit/Delete buttons on existing products to manage them
+5. Changes appear immediately on the main site
+
+### Image URLs:
+You can use free images from:
+- **Unsplash**: `https://images.unsplash.com/photo-[ID]?w=400&h=400&fit=crop`
+- **Pexels**: `https://images.pexels.com/photos/[ID]/...`
+- Any direct image URL
+
 ## Local Development
 
 Simply open `index.html` in your browser. No build process required!
+
+To manage products, open `admin.html` in your browser.
 
 ## Browser Support
 

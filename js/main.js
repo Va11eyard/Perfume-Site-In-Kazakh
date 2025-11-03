@@ -164,3 +164,89 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
+
+// Dynamic Products Loading
+document.addEventListener('DOMContentLoaded', function() {
+    const productsGrid = document.querySelector('.products-grid');
+    
+    if (productsGrid) {
+        loadProducts();
+    }
+});
+
+function loadProducts() {
+    const productsGrid = document.querySelector('.products-grid');
+    const products = getProductsFromStorage();
+    
+    if (products.length === 0) {
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-light);">Өнімдер жоқ</p>';
+        return;
+    }
+    
+    productsGrid.innerHTML = products.map(product => `
+        <div class="product-card">
+            <img src="${product.image}" alt="${product.name}" loading="lazy">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <span class="price">${product.price.toLocaleString()} ₸</span>
+        </div>
+    `).join('');
+}
+
+function getProductsFromStorage() {
+    const products = localStorage.getItem('perfumeProducts');
+    
+    // If no products in localStorage, return default products
+    if (!products) {
+        const defaultProducts = [
+            {
+                id: 1,
+                name: "Гүл иісі",
+                description: "Жазғы гүлдердің нәзік хош иісі. Романтикалық және жұмсақ парфюм.",
+                price: 15000,
+                image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop"
+            },
+            {
+                id: 2,
+                name: "Мұхит самалы",
+                description: "Теңіз самалының сергек және таза иісі. Күнделікті қолдануға өте ыңғайлы.",
+                price: 18000,
+                image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop"
+            },
+            {
+                id: 3,
+                name: "Түнгі жұлдыз",
+                description: "Кешкі шараларға арналған ерекше парфюм. Күшті және тартымды иіс.",
+                price: 22000,
+                image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop"
+            },
+            {
+                id: 4,
+                name: "Алтын күз",
+                description: "Күзгі орманның жылы және жұмсақ иісі. Классикалық және элегантты.",
+                price: 17500,
+                image: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=400&fit=crop"
+            },
+            {
+                id: 5,
+                name: "Жасмин бағы",
+                description: "Жасмин гүлінің хош иісі. Әйелдерге арналған нәзік парфюм.",
+                price: 19500,
+                image: "https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=400&h=400&fit=crop"
+            },
+            {
+                id: 6,
+                name: "Қара мысық",
+                description: "Күшті және сексуалды иіс. Ерлерге және батыл әйелдерге арналған.",
+                price: 24000,
+                image: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop"
+            }
+        ];
+        
+        // Initialize localStorage with default products
+        localStorage.setItem('perfumeProducts', JSON.stringify(defaultProducts));
+        return defaultProducts;
+    }
+    
+    return JSON.parse(products);
+}
